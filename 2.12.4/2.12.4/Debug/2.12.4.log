@@ -1,0 +1,4 @@
+﻿  2.12.4.c
+C:\documents\C语言\项目\My-test\2.12.4\2.12.4\2.12.4.c(14): warning C4716: 'jolly': must return a value
+C:\documents\C语言\项目\My-test\2.12.4\2.12.4\2.12.4.c(18): warning C4716: 'deny': must return a value
+  2.12.4.vcxproj -> C:\documents\C语言\项目\My-test\2.12.4\Debug\2.12.4.exe
