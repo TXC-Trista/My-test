@@ -1,0 +1,6 @@
+﻿  3.11.1.c
+C:\documents\C语言\项目\My-test\3.11.1\3.11.1\3.11.1.c(10,1): warning C4305: 'initializing': truncation from '__int64' to 'int'
+C:\documents\C语言\项目\My-test\3.11.1\3.11.1\3.11.1.c(11,1): warning C4056: overflow in floating-point constant arithmetic
+C:\documents\C语言\项目\My-test\3.11.1\3.11.1\3.11.1.c(12,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\documents\C语言\项目\My-test\3.11.1\3.11.1\3.11.1.c(11): warning C4756: overflow in constant arithmetic
+  3.11.1.vcxproj -> C:\documents\C语言\项目\My-test\3.11.1\Debug\3.11.1.exe
