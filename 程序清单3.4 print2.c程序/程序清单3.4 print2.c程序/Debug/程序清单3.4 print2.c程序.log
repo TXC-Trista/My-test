@@ -1,0 +1,5 @@
+﻿  print2.c
+C:\documents\C语言\项目\程序清单3.4 print2.c程序\程序清单3.4 print2.c程序\print2.c(13,9): warning C4477: 'printf' : format string '%ld' requires an argument of type 'long', but variadic argument 2 has type '__int64'
+C:\documents\C语言\项目\程序清单3.4 print2.c程序\程序清单3.4 print2.c程序\print2.c(13,9): message : consider using '%lld' in the format string
+C:\documents\C语言\项目\程序清单3.4 print2.c程序\程序清单3.4 print2.c程序\print2.c(13,9): message : consider using '%I64d' in the format string
+  程序清单3.4 print2.c程序.vcxproj -> C:\documents\C语言\项目\程序清单3.4 print2.c程序\Debug\程序清单3.4 print2.c程序.exe
