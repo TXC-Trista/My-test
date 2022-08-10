@@ -1,0 +1,3 @@
+﻿  4.8.2.c
+C:\documents\C语言\项目\My-test\4.8.2\4.8.2\4.8.2.c(16,12): warning C4013: 'strlen' undefined; assuming extern returning int
+  4.8.2.vcxproj -> C:\documents\C语言\项目\My-test\4.8.2\Debug\4.8.2.exe

@@ -1,0 +1,4 @@
+﻿  5.11.4.c
+C:\documents\C语言\项目\My-test\5.11.4\5.11.4\5.11.4.c(15,37): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\documents\C语言\项目\My-test\5.11.4\5.11.4\5.11.4.c(16,44): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  5.11.4.vcxproj -> C:\documents\C语言\项目\My-test\5.11.4\Debug\5.11.4.exe
