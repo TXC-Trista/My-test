@@ -13,7 +13,7 @@ int main(void)
 {
 	char ch;
 	int x, y, z, w, length;
-	printf("输入一个大写字母：");
+	printf("输入一个字母：");
 	scanf("%c", &ch);
 
 	length = ch - 'A';              
