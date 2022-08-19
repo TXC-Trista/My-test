@@ -1,3 +1,2 @@
 ﻿  prime.c
-C:\documents\C语言\项目\练习\打印素数\打印素数\prime.c(86,26): warning C4244: 'function': conversion from 'unsigned __int64' to 'double', possible loss of data
-  打印素数.vcxproj -> C:\documents\C语言\项目\练习\打印素数\Debug\打印素数.exe
+  打印素数.vcxproj -> C:\documents\C语言\项目\My-test\打印素数\Debug\打印素数.exe
