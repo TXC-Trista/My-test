@@ -26,8 +26,13 @@ int main(void)
     printf("请输入一周工作的小时数：");
     scanf("%lf", &h);
     
-    over_pay = ((h - 40) * OVERTIME) * BASE_PAY;
-    all_pay = over_pay + 40 * BASE_PAY;
+    if (h > 40)
+    {
+        over_pay = ((h - 40) * OVERTIME) * BASE_PAY;
+        all_pay = over_pay + 40 * (double)BASE_PAY;
+    }
+    else
+        all_pay = h * BASE_PAY;
    
     if (all_pay <= BREAK1)
         rate = all_pay * RATE1;
@@ -36,7 +41,8 @@ int main(void)
         rate = (BREAK1 * RATE1) + ((all_pay - BREAK1) * RATE2);
        //rate = (300 * 0.15) + ((all_pay - 300) * 0.2)
     else
-        rate = (BREAK1 * RATE1) + ((BREAK2 - BREAK1) * RATE2) + ((all_pay - BREAK2) * RATE3);
+        rate = (BREAK1 * RATE1) + (((double)BREAK2 - (double)BREAK1) * RATE2) + 
+        ((all_pay - BREAK2) * RATE3);
        //rate = (300 * 0.15) + ((450-300)*0.2) + ((all_pay - 450) * 0.25)
     
     net_in = all_pay - rate;
