@@ -25,7 +25,11 @@ int main(void)
 
     printf("请输入一周工作的小时数：");
     scanf("%lf", &h);
-    
+    while (h < 0)    //此循环用来确保输入的小时数大于0
+    {
+        printf("请输入一周工作的小时数(h>0)：");
+        scanf("%lf", &h);
+    }
     if (h > 40)
     {
         over_pay = ((h - 40) * OVERTIME) * BASE_PAY;

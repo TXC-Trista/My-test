@@ -36,9 +36,9 @@ int main(void)
     double rate;        //税金
     double net_in;      //净收入
    
-    begin:
     do
     {
+    begin:
         base_menu();
         printf("请选择工资等级：");
         scanf("%d", &lever);
@@ -53,23 +53,30 @@ int main(void)
         case 4: base_pay = 11.2;
             break;
         case 5: printf("结束程序\n");
-            goto end;
+            goto end;     //输入5，直接程序结束
         default:
             printf("请输入正确的选项！\n");
-            goto begin;
+            goto begin;   //输入1-5以外的，重新打印菜单，选择工资等级
         }
     } while (5 == lever);
     
-    printf("请输入一周工作的小时数：");
+    printf("请输入一周工作的小时数(h>0)：");
     scanf("%lf", &h);
+    while (h < 0)    //此循环用来确保输入的小时数大于0
+    {
+        printf("请输入一周工作的小时数(h>0)：");
+        scanf("%lf", &h);
+    }
     if (h > 40)
     {
         over_pay = ((h - 40) * OVERTIME) * base_pay;
         all_pay = over_pay + 40 * base_pay;
     }
     else
+    {
         all_pay = h * base_pay;
-
+    }
+   
     if (all_pay <= BREAK1)
         rate = all_pay * RATE1;
     //rate = all_pay * 0.15
