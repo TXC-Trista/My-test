@@ -28,20 +28,22 @@ c.税率：前300美元为15%
 void base_menu();
 int main(void)
 {
-    double h;           //一周工作的时间
+    double h = -1;    //一周工作的时间(初始值设为负数，是为了后面直接进入while循环）
     int lever = 0;          //工资等级
     double base_pay = 0;    //基本工资
     double all_pay;     //工资总额
     double over_pay;    //加班费
     double rate;        //税金
     double net_in;      //净收入
-   
+
     do
     {
     begin:
         base_menu();
-        printf("请选择工资等级：");
+        printf("请选择工资等级(1-4)：");
         scanf("%d", &lever);
+        while (getchar()!= '\n')   //getchar()用来清空缓冲区
+            ;                   //空字符用来占位
         switch (lever)
         {
         case 1: base_pay = 8.75;
@@ -59,13 +61,13 @@ int main(void)
             goto begin;   //输入1-5以外的，重新打印菜单，选择工资等级
         }
     } while (5 == lever);
-    
-    printf("请输入一周工作的小时数(h>0)：");
-    scanf("%lf", &h);
+
     while (h < 0)    //此循环用来确保输入的小时数大于0
     {
         printf("请输入一周工作的小时数(h>0)：");
         scanf("%lf", &h);
+        while (getchar() != '\n')   //getchar()用来清空缓冲区
+            ;             //空字符用来占位
     }
     if (h > 40)
     {

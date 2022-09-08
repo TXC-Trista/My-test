@@ -18,16 +18,18 @@
 void menu();
 int main(void)
 {
-	int lever;         //交税种类
-    double base;       //起征点
-    double income;      //收入
-    double taxes;       //缴税
+	int lever;           //交税种类
+    double base;         //起征点
+    double income = -1;  //收入(初始值设为负数，是为了后面直接进入while循环）
+    double taxes;        //缴税
     do
     {
     begin:
         menu();
         printf("请选择缴纳税金的种类：");
         scanf("%d", &lever);
+        while (getchar() != '\n')   //getchar()用来清空缓冲区
+            ;                   //空字符用来占位
         switch (lever)
         {
         case 1: base = SINGLE;
@@ -45,12 +47,13 @@ int main(void)
             goto begin;   //输入1-5以外的，重新打印菜单，选择税金种类
         }
     } while (5 == lever);
-    printf("请输入您的收入：");
-    scanf("%lf", &income);
+  
     while (income < 0)    //此循环用来确保输入的收入大于0
     {
         printf("请输入您的收入(大于0)：");
         scanf("%lf", &income);
+        while (getchar() != '\n')   //getchar()用来清空缓冲区
+            ;                   //空字符用来占位
     }
     if (income <= base)          //收入小于等于起征点时
         taxes = income * RATE1;  //税金 = 收入 * 0.15;
